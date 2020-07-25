@@ -25,12 +25,3 @@ sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres par�
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.
 
 ##Estas funciones deben ser puras e independientes del DOM. Estas funciones serán después usadas desde el archivo src/main.js, al cargar la página, y cada vez que el usuario interactúe (click, filtrado, ordenado, ...).*/
-=======
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
->>>>>>> 012dc80b6eaf60fd645f3b35dea6b8e266b56c36
