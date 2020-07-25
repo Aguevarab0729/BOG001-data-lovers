@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-width, height=device-height, initial-scale= 1">
+    <title>Rick and Morty - Proyecto DataLovers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css" media="screen and (min-width: 320px) and (max-width: 1440px)" />
+  </head>
+  <body>
+    <header>
+      <img src="HeaderRickandMorty.png" alt="logo" id="header">
+    </header>
+    <h2>BIENVENIDO A LAS AVENTURAS DE RICK AND MORTY</h2>
+    <p id="infoTitulo">Este sitio fue desarrollado y pensado para los amantes de la serie.<br> Aquí encontraras todos los personajes.</p>
+    
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <script>
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+      <a href="https://rickandmortyapi.com/about/">Sobre nosotros</a>
+      <a href="https://www.adultswim.com/videos/rick-and-morty">Videos Cortos</a>
+      <a href="https://www.adultswim.com/games/">Juegos</a>
+      <a href="https://www.adultswim.com/streams/rick-and-morty">En vivo</a>
+      <a href="https://rickandmortyapi.com/help-us">Ayuda y soporte</a>
+    </div>
+    <!--Button de acceso a barra lateral-->
+    <span onclick="openNav()">&#9776;</span>
+    <script>
+    function openNav () {
+      document.getElementById("mySidenav").style.width = '250px';
+      }
+    </script>
+    <script>
+    // Open and close sidebar
+    function open() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+    
+    <div>
+      <select name="filterClass" id="episode">
+        <option value="">Episodio</option>
+      </select>
+
+      <select class="filterClass" id="speciesFilter">
+        <option value="">Especie</option>
+      </select>
+
+      <select class="filterClass" id="originFilter" font-size="2%">
+        <option value="">Origen</option>
+      </select>
+
+      <select class="filterClass" id="statusFilter">
+        <option value="">Estado</option>
+      </select>
+      
+      <input type="text" class="filterClass" id="buscador" placeholder="Buscar...">
+    </div>
+    <br>
+
+    <section class="tarjetas" id="container"></section>
+
+    <footer class="container">
+    </footer>
+    
+    <!--Preguntar si el type seleccionado es el adecuado para importar o exportar-->
+    <script type="text/javascript" src="./data/rickandmorty/rickandmorty.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
+  </body>
+</html>
