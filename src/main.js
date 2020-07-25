@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import data from './data/rickandmorty/rickandmorty.js';
 
 /*const speciesFilter = document.getElementById("speciesFilter");
@@ -76,3 +77,11 @@ console.log(showStatusFiltro);*/
 Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers)
 -Puedes usar más archivos y carpetas.
 Y ahora tendríamos la variable data disponible en el script src/main.js*/
+=======
+import { example } from './data.js';
+// import data from './data/lol/lol.js';
+import data from './data/pokemon/pokemon.js';
+// import data from './data/rickandmorty/rickandmorty.js';
+
+console.log(example, data);
+>>>>>>> 012dc80b6eaf60fd645f3b35dea6b8e266b56c36
