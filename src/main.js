@@ -105,4 +105,11 @@ buscador.addEventListener('keyup', (event) => {
   showCharacters(searchCharacters);
 }) 
 
+<<<<<<< HEAD
 
+=======
+/*Mostrar los datos en la pantalla - interacción con el DOM
+Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers)
+-Puedes usar más archivos y carpetas.
+Y ahora tendríamos la variable data disponible en el script src/main.js*/
+>>>>>>> 914947900491851beee8f2974a97aca9fdfa2ccf
