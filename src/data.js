@@ -1,20 +1,56 @@
-// estas funciones son de ejemplo
-
-<<<<<<< HEAD
-import data from './data/rickandmorty/rickandmorty.js';
-import rickandmorty from './data/rickandmorty/rickandmorty.js';
-
-export const filterSpecies = (speciesCharacters, charactersData = data.rickandmorty) => {
-  if (speciesCharacters === "") {
-    return charactersData;
-  } 
-  else {
-    console.log(charactersData);
-    return charactersData.filter(rickandMorty => {return rickandmorty.species.includes(speciesCharacters)})
+export const filterDataSp = (data,options) => {
+  const filter= data.filter((character)=> character.species === options);
+  console.log(filterDataSp);
+  return filter;
 }
-};
 
+export const filterDataSta = (data,options) => {
+  const filter = data.filter((character)=> character.status === options);
+  return filter;
+}
 
+export const filterDataOrg = (data,options) => {
+  const filter = data.filter((character)=> character.origin.name === options);
+  return filter;
+}
+
+/*export const filterDataName = (data, input) => {
+  const buscar = data.filter ((character) => character.name.toLowerCase().includes(input.toLowerCase())*/
+
+  export const filterDataName = (data, input) => {
+  return data.filter(characters => {
+    if (isNaN(input)) {
+      return characters.name.toLowerCase().includes(input.toLowerCase())
+    }
+    else {
+      return data;
+    }
+  })
+}
+
+export const filterOrder = (data,options) => {
+  if (options === ""){
+    return data;
+  }
+  if (options === "a-z"){
+    return data.sort((prev, next) => {
+      if(prev.name > next.name){
+        return 1;  
+      } else {
+        return -1;
+      }
+    })
+  }
+  if(options === "z-a"){
+    return data.sort((prev, next) => {
+      if(prev.name < next.name){
+        return 1;  
+      } else {
+        return -1;
+      } 
+    })
+  }
+}
 
 /*Manipulación de datos a través de arreglos y objetos.
 toda la funcionalidad que corresponda a obtener, procesar y manipular datos (funciones).
@@ -25,12 +61,3 @@ sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres par�
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.
 
 ##Estas funciones deben ser puras e independientes del DOM. Estas funciones serán después usadas desde el archivo src/main.js, al cargar la página, y cada vez que el usuario interactúe (click, filtrado, ordenado, ...).*/
-=======
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
->>>>>>> 012dc80b6eaf60fd645f3b35dea6b8e266b56c36

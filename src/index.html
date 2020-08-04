@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
     <meta name="viewport" content="width= device-width, height=device-height, initial-scale= 1">
     <title>Rick and Morty - Proyecto DataLovers</title>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
@@ -13,7 +12,7 @@
     <header>
       <img src="HeaderRickandMorty.png" alt="logo" id="header">
     </header>
-    <h2>BIENVENIDO A LAS AVENTURAS DE RICK AND MORTY</h2>
+    <h1>BIENVENIDO A LAS AVENTURAS DE RICK AND MORTY</h1>
     <p id="infoTitulo">Este sitio fue desarrollado y pensado para los amantes de la serie.<br> Aquí encontraras todos los personajes.</p>
     
     <div id="mySidenav" class="sidenav">
@@ -21,20 +20,20 @@
       <script>
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        }
+      }
       </script>
-      <a href="https://rickandmortyapi.com/about/">Sobre nosotros</a>
-      <a href="https://www.adultswim.com/videos/rick-and-morty">Videos Cortos</a>
-      <a href="https://www.adultswim.com/games/">Juegos</a>
-      <a href="https://www.adultswim.com/streams/rick-and-morty">En vivo</a>
-      <a href="https://rickandmortyapi.com/help-us">Ayuda y soporte</a>
+      <a href="https://rickandmortyapi.com/about/" target="_blank">Sobre nosotros</a>
+      <a href="https://www.adultswim.com/videos/rick-and-morty" target="_blank">Videos Cortos</a>
+      <a href="https://www.adultswim.com/games/" target="_blank">Juegos</a>
+      <a href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">En vivo</a>
+      <a href="https://rickandmortyapi.com/help-us" target="_blank">Ayuda y soporte</a>
     </div>
     <!--Button de acceso a barra lateral-->
     <span onclick="openNav()">&#9776;</span>
     <script>
     function openNav () {
       document.getElementById("mySidenav").style.width = '250px';
-      }
+    }
     </script>
     <script>
     // Open and close sidebar
@@ -47,45 +46,37 @@
     }
     </script>
     
-    <div>
-      <select name="filterClass" id="episode">
-        <option value="">Episodio</option>
+    <input type="text" id="buscador" placeholder="Buscar...">
+    
+    <div id="selectores">
+      <select class="filterClass" id="selectorOrder">
+        <option disabled selected>Ordenar</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
       </select>
-
-      <select class="filterClass" id="speciesFilter">
-        <option value="">Especie</option>
+      <select class="filterClass" id="selectorSpecies">
+        <option disabled selected>Especie</option>
       </select>
-
-      <select class="filterClass" id="originFilter" font-size="2%">
-        <option value="">Origen</option>
+  
+      <select class="filterClass" id="selectorOrigin" font-size="2%">
+        <option disabled selected>Origen</option>
       </select>
-
-      <select class="filterClass" id="statusFilter">
-        <option value="">Estado</option>
-      </select>
-      
-      <input type="text" class="filterClass" id="buscador" placeholder="Buscar...">
+  
+      <select class="filterClass" id="selectorStatus">
+        <option disabled selected>Estado</option>
+      </select>   
     </div>
-    <br>
-
+    
     <section class="tarjetas" id="container"></section>
 
-    <footer class="container">
+    <footer>
+      <h2>Copyright ©  Julio - 2020 <br>·<br> Web hecha en Bogotá D.C. por Angelica Guevara y Angelica Urrego - bootcamp Laboratoria</h5>
+        
     </footer>
     
     <!--Preguntar si el type seleccionado es el adecuado para importar o exportar-->
     <script type="text/javascript" src="./data/rickandmorty/rickandmorty.js"></script>
     <script src="main.js" type="module"></script>
     <script src="data.js" type="module"></script>
-=======
-    <title>Data Lovers Angélicas</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-  <h1> Bienvenidos a nuestro proyecto colaborativo, este es un ejemplo</h1>
-  <p>prueba</p>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
->>>>>>> 012dc80b6eaf60fd645f3b35dea6b8e266b56c36
   </body>
 </html>

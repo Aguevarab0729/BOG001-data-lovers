@@ -1,87 +1,108 @@
-<<<<<<< HEAD
 import data from './data/rickandmorty/rickandmorty.js';
-
-/*const speciesFilter = document.getElementById("speciesFilter");
-const originFilter = document.getElementById("originFilter");
-const statusFilter = document.getElementById("statusFilter");
-const buscador = document.getElementById("buscador");*/
-
-// tomar los elementos que necesitamos para los filtros
-export const dataContent = (characters) => {}
-console.log(data);
+import {filterDataSp, filterDataSta, filterDataOrg, filterDataName, filterOrder} from './data.js'
 
 //Función que toma la data y crea con ella y html dinamico tarjetas con la información que nos interesa
 let rickAndMortyData = data.results;
 
-function showCharacters (){
-rickAndMortyData.forEach(function(character){
-let elementContainer = document.getElementById('container');
-
-elementContainer.innerHTML +=
-`<div class="tarjeta">
- <img src= "${character.image}" alt= "${character.name}">
- <ul style="list-style-type: none">
-   <li><h3>Nombre: ${character.name}</h3></li>
-   <li><h3>Especie: ${character.species}</h3></li>
-   <li><h3>Origen: ${character.origin.name}</h3></li>
-   <li><h3>Estado: ${character.status}</h3></li>
- </ul>
-</div>`
-});
+function showCharacters (characters){
+  let elementContainer = document.getElementById('container');
+  elementContainer.innerHTML= '';
+  characters.forEach(function(character) {
+    elementContainer.innerHTML +=
+    `<div class="tarjeta">
+    <img src= "${character.image}" alt= "${character.name}">
+    <ul style="list-style-type: none">
+    <li><h3>Nombre: ${character.name}</h3></li>
+    <li><h3>Especie: ${character.species}</h3></li>
+    <li><h3>Origen: ${character.origin.name}</h3></li>
+    <li><h3>Estado: ${character.status}</h3></li>
+    </ul>
+    </div>`
+  });
 }
-showCharacters();
+showCharacters(rickAndMortyData);
 //console.log(showCharacters);
 
-//Funcion que filtra la data por especie
-let mapSpecies = rickAndMortyData.map(function(especies){
-  return especies.species
-})
-const especies = mapSpecies;
-const valoresEspecies = new Set(especies)
-console.log(valoresEspecies);
+function printSpecies() {
 
-//Funcion que filtra la data por origen
-let mapOrigin = rickAndMortyData.map(function(origen){
-  return origen.origin.name
-})
-const origen = mapOrigin;
-const valoresOrigen = new Set(origen)
-console.log(valoresOrigen);
+let mapSpecies = rickAndMortyData.map((especies) => especies.species);
 
-//Funcion que toma toda la data y devuelve solo los valores de estado, luego utilizamos esta informacion para que nos devuelva solo los primeros valores y no los repita.
-let mapStatus = rickAndMortyData.map(function(estado){
-  return estado.status
-})
-const estado = mapStatus;
-const valoresEstado = new Set(estado)
-console.log(valoresEstado);
+const valoresEspecies = [...new Set(mapSpecies)];
+let selectorSpecies = document.getElementById("selectorSpecies");
+selectorSpecies.addEventListener('change',selectionSpecies);
 
-/*function showStatusFiltro() {
-  let mapStatus = rickAndMortyData.map(function(valoresEstado){
-    const estado = mapStatus;
-    const valoresEstado = new Set(estado)
-    let botonEstado = document.getElementById('statusFilter');
+for (let i = 0; i< valoresEspecies.length; i++) {
+    let opcion= document.createElement('option');
+    opcion.value= valoresEspecies [i];
+    opcion.innerText= valoresEspecies [i];
+    selectorSpecies.appendChild(opcion);
+  }
 
-    botonEstado.innerHTML +=
-    `<select>
-    <option>${valoresEstado.status}</option>
-    </select>`
-  })
+let mapStatus = rickAndMortyData.map((estado) => estado.status);
+
+const valoresEstado = [...new Set(mapStatus)];
+//console.log(valoresEstado);
+
+let selectorStatus= document.getElementById("selectorStatus");
+selectorStatus.addEventListener('change',selectionStatus);
+
+for (let i = 0; i < valoresEstado.length; i++){
+  let opcion = document.createElement('option');
+  opcion.value = valoresEstado [i];
+  opcion.innerText = valoresEstado [i];
+  selectorStatus.appendChild(opcion);
+  }
+
+let mapOrigin = rickAndMortyData.map((origen) => origen.origin.name);
+
+const valoresOrigen = [...new Set(mapOrigin)];
+//console.log(valoresOrigen);
+
+let selectorOrigin = document.getElementById("selectorOrigin");
+selectorOrigin.addEventListener('change',selectionOrigin);
+
+for (let i = 0; i< valoresOrigen.length; i++){
+  let opcion = document.createElement('option');
+  opcion.value = valoresOrigen [i];
+  opcion.innerText = valoresOrigen [i];
+  selectorOrigin.appendChild(opcion);
+  }
 }
-showStatusFiltro();
-console.log(showStatusFiltro);*/
+printSpecies();
+
+function selectionSpecies(event){
+  let valorSelect = event.target.value;
+  let filterDataSpecies = filterDataSp(rickAndMortyData, valorSelect);
+  showCharacters(filterDataSpecies);
+  //console.log(filterDataSpecies);
+}
+
+function selectionStatus(event){
+  let valorSelect = event.target.value;
+  let filterDataStatus = filterDataSta(rickAndMortyData, valorSelect);
+  showCharacters(filterDataStatus);
+  //console.log(filterDataSpecies);
+}
+
+function selectionOrigin(event){
+  let valorSelect = event.target.value;
+  let filterDataOrigin = filterDataOrg(rickAndMortyData, valorSelect);
+  showCharacters(filterDataOrigin);
+  //console.log(filterDataSpecies);
+}
+
+let optionOrder = document.getElementById("selectorOrder");
+optionOrder.addEventListener('change', (event) => {
+  let valorSelect = event.target.value;
+  let filterDataOrder = filterOrder(rickAndMortyData, valorSelect);
+  showCharacters(filterDataOrder);
+});
+
+let buscador = document.getElementById("buscador");
+buscador.addEventListener('keyup', (event) => {
+  const valorInput = event.target.value;
+  const searchCharacters = filterDataName(rickAndMortyData, valorInput);
+  showCharacters(searchCharacters);
+}) 
 
 
-
-/*Mostrar los datos en la pantalla - interacción con el DOM
-Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers)
--Puedes usar más archivos y carpetas.
-Y ahora tendríamos la variable data disponible en el script src/main.js*/
-=======
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-console.log(example, data);
->>>>>>> 012dc80b6eaf60fd645f3b35dea6b8e266b56c36
