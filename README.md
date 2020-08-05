@@ -21,12 +21,12 @@ Este sitio web se desarrolla con el objetivo de presentar una solucion a usuario
 
 Estos prototipos fueron desarrollados con el usuario y el equipo de diseño, finalmente se recibió feedback al respecto y se realizaron las mejoras para así empezar a desarrollar y codear el proyecto.
 
-![Prototipo pápel y lápiz](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Prototipo%20a%20papel.jpeg)
-![Prototipo Celular 1](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Celular%201.jpg)
-![Prototipo Celular 2](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Celular%202.jpg)
-![Prototipo Celular 3](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Celular%203.jpg)
-![Prototipo Desktop 1](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Desktop%20-%201.jpg)
-![Prototipo Desktop 2](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/Desktop%20-%202.png)
+![Prototipo pápel y lápiz](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Prototipo%20a%20papel.jpeg)
+![Prototipo Celular 1](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Celular%201.jpg)
+![Prototipo Celular 2](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Celular%202.jpg)
+![Prototipo Celular 3](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Celular%203.jpg)
+![Prototipo Desktop 1](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Desktop%20-%201.jpg)
+![Prototipo Desktop 2](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Desktop%20-%202.png)
 
 ## Historias de usuario
 
@@ -76,4 +76,4 @@ Todas las historias de usuario (Cumplen con Definición de Terminado y los Crite
 
 Se realizaron pruebas de usabilidad con compañeras y familiares, determinando que la pagina se demoraba un poco en responder en el filtrado de orden alfabetico y en el buscador. Sin embargo la parte visual de los personajes y el fondo en general fue de agrado para los usuarios.
 
-![Testing](/src/img/testing.jpg)
+![Testing](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/testing.JPG)
