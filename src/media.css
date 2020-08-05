@@ -42,6 +42,7 @@
     left: 45%;
     top: 120px;
     font-size: 12px;
+    border-radius: 0.5em;
     margin-inline-start: 8px;
     background-color: white;
     color: black;
@@ -109,6 +110,7 @@
     left: 50%;
     top: 140px;
     font-size: 12px;
+    border-radius: 0.5em;
     margin-inline-start: 8px;
     background-color: white;
     color: black;
@@ -179,6 +181,7 @@
     left: 63%;
     top: 25%;
     font-size: 20px;
+    border-radius: 0.5em;
     margin-inline-start: 8px;
     background-color: white;
     color: black;
@@ -230,6 +233,7 @@
     left: 70%;
     top: 195px;
     font-size: 20px;
+    border-radius: 0.5em;
     margin-inline-start: 8px;
     background-color: white;
     color: black;
@@ -290,6 +294,7 @@
     left: 75%;
     top: 220px;
     font-size: 20px;
+    border-radius: 0.5em;
     margin-inline-start: 8px;
     background-color: white;
     color: black;

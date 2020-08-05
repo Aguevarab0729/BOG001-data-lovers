@@ -42,6 +42,7 @@ span {
   left: 75%;
   top: 220px;
   font-size: 19px;
+  border-radius: 0.5em;
   margin-inline-start: 8px;
   background-color: white;
   color: black;
