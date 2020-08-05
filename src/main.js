@@ -26,7 +26,7 @@ showCharacters(rickAndMortyData);
 function printSpecies() {
 
 let mapSpecies = rickAndMortyData.map((especies) => especies.species);
-
+// eslint-disable-next-line no-undef
 const valoresEspecies = [...new Set(mapSpecies)];
 let selectorSpecies = document.getElementById("selectorSpecies");
 selectorSpecies.addEventListener('change',selectionSpecies);
@@ -40,6 +40,7 @@ for (let i = 0; i< valoresEspecies.length; i++) {
 
 let mapStatus = rickAndMortyData.map((estado) => estado.status);
 
+// eslint-disable-next-line no-undef
 const valoresEstado = [...new Set(mapStatus)];
 //console.log(valoresEstado);
 
@@ -54,7 +55,7 @@ for (let i = 0; i < valoresEstado.length; i++){
   }
 
 let mapOrigin = rickAndMortyData.map((origen) => origen.origin.name);
-
+// eslint-disable-next-line no-undef
 const valoresOrigen = [...new Set(mapOrigin)];
 //console.log(valoresOrigen);
 
@@ -105,11 +106,7 @@ buscador.addEventListener('keyup', (event) => {
   showCharacters(searchCharacters);
 }) 
 
-<<<<<<< HEAD
-
-=======
 /*Mostrar los datos en la pantalla - interacción con el DOM
 Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers)
 -Puedes usar más archivos y carpetas.
 Y ahora tendríamos la variable data disponible en el script src/main.js*/
->>>>>>> 914947900491851beee8f2974a97aca9fdfa2ccf

@@ -1,6 +1,6 @@
 export const filterDataSp = (data,options) => {
   const filter= data.filter((character)=> character.species === options);
-  console.log(filterDataSp);
+  //console.log(filterDataSp);
   return filter;
 }
 
@@ -14,10 +14,7 @@ export const filterDataOrg = (data,options) => {
   return filter;
 }
 
-/*export const filterDataName = (data, input) => {
-  const buscar = data.filter ((character) => character.name.toLowerCase().includes(input.toLowerCase())*/
-
-  export const filterDataName = (data, input) => {
+export const filterDataName = (data, input) => {
   return data.filter(characters => {
     if (isNaN(input)) {
       return characters.name.toLowerCase().includes(input.toLowerCase())

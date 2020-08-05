@@ -55,6 +55,10 @@ describe('filterDataName', () => {
   it('deberia retornar elemento que coincide con el el input', () => {
     expect(filterDataName(objetos, "Alex")).toEqual(resultado);
   });
+
+  it('deberia retornar toda la data si el imput esta vacio', () => {
+    expect(filterDataName(objetos, "")).toEqual(objetos);
+  });
 });
 
 //Filtrado ordenado de la A a la Z
@@ -64,14 +68,19 @@ describe('filterOrder', () => {
   });
 
   const objetos = [{"name": "Alexander"}, {"name": "Simple Rick"}, {"name": "Jan-Michael Vincent"}, {"name": "Zarbadar Gloonch"}]
+  const objetos2 = [{"name": "Alexander"}, {"name": "Simple Rick"}, {"name": "Jan-Michael Vincent"}, {"name": "Zarbadar Gloonch"}]
   const resultado1 =[{"name": "Alexander"}, {"name": "Jan-Michael Vincent"}, {"name": "Simple Rick"}, {"name": "Zarbadar Gloonch"}]
   const resultado2 =[{"name": "Zarbadar Gloonch"}, {"name": "Simple Rick"}, {"name": "Jan-Michael Vincent"}, {"name": "Alexander"}]
+
+
+  it ('deberia retornar toda la data si el campo esta vacio',() => {
+    expect(filterOrder(objetos, "")).toEqual(objetos);
+  })
+  it('deberia retornar el array organizado alfabeticamente de la Z a la A', () => {
+    expect(filterOrder(objetos2, "z-a")).toEqual(resultado2);
+  })
 
   it('deberia retornar el array organizado alfabeticamente de la A a la Z', () => {
     expect(filterOrder(objetos, "a-z")).toEqual(resultado1);
   });
-
-  it('deberia retornar el array organizado alfabeticamente de la Z a la A', () => {
-    expect(filterOrder(objetos, "z-a")).toEqual(resultado2);
-  })
 })

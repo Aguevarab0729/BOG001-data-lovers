@@ -76,4 +76,4 @@ Todas las historias de usuario (Cumplen con Definición de Terminado y los Crite
 
 Se realizaron pruebas de usabilidad con compañeras y familiares, determinando que la pagina se demoraba un poco en responder en el filtrado de orden alfabetico y en el buscador. Sin embargo la parte visual de los personajes y el fondo en general fue de agrado para los usuarios.
 
-![Testing](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/testing.JPG)
+![Testing](https://github.com/Aguevarab0729/BOG001-data-lovers/blob/master/src/img/Test.jpg)
