@@ -11,7 +11,7 @@ los datos que mas les interesa de los personajes son especie, origen y estado.
   - imagen
   - estado de vida
   - especie
-  - lugar de origen (planeta tierra)
+  - lugar de origen (planeta tierra y diferentes dimensiones)
 
 ## Objetivo
 
@@ -37,13 +37,17 @@ Entendiendo las necesidades de nuestros usuarios, categorizamos las historias de
 Criterios de Aceptación
 
 [X] Debe ser responsive (dispositivo movil, tablet y escritorio). Y haber probado en min dos dispositivos.
+
 [X] Debe poder visualizarse la totalidad de personajes haciendo scroll en la página.
+
 [X] Diseño y color contrastante y accesible a todos los usuarios.
+
 [X] pedir feedback y realizar cambios.
 
 Definición de Terminado
 
 [X] Que sea visible las tarjetas correspondientes a cada personaje con su respectivo nombre.
+
 [X] cumplir con los criterios de aceptación.
 
 ### H2 Yo como usuario deseo poder filtrar los personajes de la serie por: especie, estado y origen.
@@ -51,23 +55,28 @@ Definición de Terminado
 Criterios de Aceptación
 
 [X] Debe poder visualizarse el boton de filtrado.
+
 [X] Se debe poder seleccionar las distintas opciones de los selectores (lista) según se requiera.
+
 [X] Debe mostrar solo los personajes que tengan las características indicadas mediante la selección.
 
 Definición de Terminado 
 
 [X] Ser responsive
+
 [X] Que realice adecuadamente el filtro en todas las opciones. 
 
 ### H3 Yo como usuario deseo tener disponible un buscador en el que pueda encontrar los personajes por su nombre y ordenarlos alfabéticamente.
 
 Criterios de Aceptación
 
-[X] Poder visualizar input de buscador y visualizar el botón de filtrado.
-[X] Que realice la búsqueda dentro de las tarjetas de los personajes por nombre y la organice adecuadamente.
+[x] Poder visualizar input de buscador y visualizar el botón de filtrado.
+
+[x] Que realice la búsqueda dentro de las tarjetas de los personajes por nombre y la organice adecuadamente.
 
 Definición de Terminado 
-[X] Ser responsive.
+[x] Ser responsive.
+
 [X] Que realice correctamente la bÚsqueda.
 
 Todas las historias de usuario (Cumplen con Definición de Terminado y los Criterios de Aceptación).
